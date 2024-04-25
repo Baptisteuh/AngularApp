@@ -1,0 +1,78 @@
+<div *ngFor="let hpCharacter of hpCharacters$ | async">
+    <div *ngIf="hpCharacter.name===this.name && hpCharacter.actor===this.actor">
+        <div class="hpchar-card">
+            <h2>{{ hpCharacter.name | uppercase }}</h2>
+            <img *ngIf="hpCharacter.image" src="{{hpCharacter.image}}">
+            <div *ngIf="hpCharacter.alternate_names.length != 0">
+                <br><strong>Alternates names :</strong>
+                <ul>
+                    <li *ngFor="let name of hpCharacter.alternate_names">
+                        {{ name | titlecase }}<br><br>
+                    </li>
+                </ul>
+            </div>
+            <div *ngIf="hpCharacter.species">
+                <p><strong>Species :</strong> {{ hpCharacter.species | titlecase }}</p>
+            </div>
+            <div *ngIf="hpCharacter.gender">
+                <p><strong>Gender :</strong> {{ hpCharacter.gender | titlecase }}</p>
+            </div>
+            <div *ngIf="hpCharacter.house">
+                <p><strong>House :</strong> {{ hpCharacter.house | titlecase }}</p>
+            </div>
+            <div *ngIf="hpCharacter.dateOfBirth">
+                <p><strong>Date of birth :</strong> {{ hpCharacter.dateOfBirth }}</p>
+            </div>
+            <div *ngIf="hpCharacter.wizard == true || hpCharacter.wizard == false">
+                <p><strong>Wizard :</strong> {{ hpCharacter.wizard ? "✔️" : "❌" }}</p>
+            </div>
+            <div *ngIf="hpCharacter.ancestry">
+                <p><strong>Ancestry :</strong> {{ hpCharacter.ancestry | titlecase }}</p>
+            </div>
+            <div *ngIf="hpCharacter.eyeColour">
+                <p><strong>Eye colour :</strong> {{ hpCharacter.eyeColour | titlecase }}</p>
+            </div>
+            <div *ngIf="hpCharacter.hairColour">
+                <p><strong>Hair colour :</strong> {{ hpCharacter.hairColour | titlecase }}</p>
+            </div>
+            <div *ngIf="hpCharacter.wand.wood">
+                <strong>Wand :</strong>
+                <ul *ngIf="hpCharacter.wand">
+                    <li>
+                        {{ hpCharacter.wand.wood | titlecase }}<br><br>
+                    </li>
+                    <li>
+                        {{ hpCharacter.wand.core | titlecase }}<br><br>
+                    </li>
+                    <li>
+                        {{ hpCharacter.wand.length }}
+                    </li>
+                </ul>
+            </div>
+            <div *ngIf="hpCharacter.patronus">
+                <p><strong>Patronus :</strong> {{ hpCharacter.patronus | titlecase }}</p>
+            </div>
+            <div *ngIf="hpCharacter.hogwartsStudent == true || hpCharacter.hogwartsStudent == false">
+                <p><strong>Hogwart's student :</strong> {{ hpCharacter.hogwartsStudent ? "✔️" : "❌" }}</p>
+            </div>
+            <div *ngIf="hpCharacter.hogwartsStaff == true || hpCharacter.hogwartsStaff == false">
+                <p><strong>Hogwart's staff :</strong> {{ hpCharacter.hogwartsStaff ? "✔️" : "❌" }}</p>
+            </div>
+            <div *ngIf="hpCharacter.actor">
+                <p><strong>Actor :</strong> {{ hpCharacter.actor | titlecase }}</p>
+            </div>
+            <div *ngIf="hpCharacter.alternate_actors.length != 0">
+                <strong>Alternates actors :</strong>
+                <ul>
+                    <li *ngFor="let actor of hpCharacter.alternate_actors">
+                        {{ actor | titlecase }}<br><br>
+                    </li>
+                </ul>
+            </div>
+            <div *ngIf="hpCharacter.alive == true || hpCharacter.alive == false">
+                <p><strong>Alive :</strong> {{ hpCharacter.alive ? "✔️" : "❌" }}</p>
+            </div>
+        </div>
+        <br>
+    </div>
+</div>

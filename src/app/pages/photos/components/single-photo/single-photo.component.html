@@ -1,0 +1,12 @@
+<div class="photo-card" *ngIf="photo$ | async as photo" [ngClass]="{ liked: photo.hasClicked }">
+    <h2>{{ photo.title | uppercase }}</h2>
+    <p>Mis en ligne à {{ photo.creationDate | date: 'HH:mm, le dd MMM yyyy' | titlecase }}</p>
+    <img [src]="photo.imageUrl" [alt]="photo.title" [@rotatedState]='state'>
+    <p>{{ photo.description }}</p>
+    <p *ngIf="photo.location">Photo prise à {{ photo.location }}</p>
+    <p>
+        <button (click)="onLike(photo.id)"> {{ buttonText }} </button>
+        <span [ngStyle]="{ color: 'rgb(0,' + photo.likes/5 + ', 0)' }"> {{ photo.likes }} </span>
+    </p>
+    <button (click)="onRotate()">TOURNER</button>
+</div>

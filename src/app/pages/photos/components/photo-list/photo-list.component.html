@@ -1,0 +1,5 @@
+<app-photo *ngFor="let photo of photos$ | async" [photo]="photo"></app-photo>
+<div class="no-photos">
+    <p *ngIf="(photos$ | async) == null || (photos$ | async)?.length == 0">Pas de photos pour le moment...</p>
+    <button routerLink="/photos/create" class="create">Créer</button>
+</div>

@@ -1,0 +1,42 @@
+.photo-card {
+  box-sizing: border-box;
+  width: 35%;
+  margin: 20px auto;
+  padding: 10px 30px;
+  box-shadow: lightgray 0px 0px 20px;
+  border-radius: 15px;
+
+  img {
+    width: 100%;
+    border-radius: 3%;
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 16px;
+  }
+
+}
+
+.liked {
+  background-color: rgba(lightgreen, 0.4);
+  color: darkgreen;
+  box-shadow: green 0px 0px 20px;
+
+  button {
+    background-color: rgba(green, 0.1);
+    color: darkgreen;
+
+    &:hover {
+      background-color: rgba(green, 0.4);
+    }
+
+    &:active {
+      background-color: rgba(green, 0.8);
+    }
+  }
+}

@@ -1,0 +1,20 @@
+a {
+    margin: 0 10px;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+
+    &:hover {
+        text-decoration: none;
+
+        .black {
+            filter: invert(100%);
+        }
+    }
+
+    .icon {
+        position: relative;
+        top: 8px;
+        width: 1.5%;
+    }
+}

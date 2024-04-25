@@ -1,0 +1,34 @@
+<div class="form-card">
+    <h2>NOUVELLE PHOTO</h2>
+    <form [formGroup]="photoForm">
+        <div class="form-group">
+            <label for="title">Titre</label>
+            <input id="title" type="text" formControlName="title">
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" type="text" formControlName="description" rows="4">
+            </textarea>
+        </div>
+        <div class="form-group">
+            <label for="imageUrl">URL de l'image</label>
+            <input id="imageUrl" type="text" formControlName="imageUrl">
+        </div>
+        <div class="form-group">
+            <label for="location">Lieu</label>
+            <input id="location" type="text" formControlName="location">
+        </div>
+        <div class="action-buttons">
+            <button type="submit" (click)="onSubmitForm()" [disabled]="photoForm.invalid">Enregistrer</button>
+        </div>
+    </form>
+</div>
+<div *ngIf="photoPreview$ | async as photo">
+    <div class="photo-card" *ngIf="photo.title || photo.description || photo.location">
+        <h2>{{ photo.title | uppercase }}</h2>
+        <p>Mis en ligne {{ photo.creationDate | date: 'à HH:mm, le d MMMM yyyy' }}</p>
+        <img [src]="photo.imageUrl" [alt]="photo.title" *ngIf="photo.title">
+        <p>{{ photo.description }}</p>
+        <p *ngIf="photo.location">Photo prise à {{ photo.location }}</p>
+    </div>
+</div>

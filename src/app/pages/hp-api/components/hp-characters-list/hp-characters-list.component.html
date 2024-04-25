@@ -1,0 +1,4 @@
+<div class="search"><label for="search">Search : </label><input id="search" name="search" [(ngModel)]="search"></div><br>
+<app-hp-character *ngFor="let hpCharacter of hpCharacters$ | async" [hpCharacter]="hpCharacter" [regex]="search">
+</app-hp-character>
+<br><br>

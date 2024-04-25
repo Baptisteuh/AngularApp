@@ -1,0 +1,24 @@
+<div class="form-card">
+    <h2>NOUVEL.LE EMPLOYÉ.E</h2>
+    <form [formGroup]="employeeForm">
+        <div class="form-group">
+            <label for="firstName">Prénom</label>
+            <input id="firstName" type="text" formControlName="firstName">
+        </div>
+        <div class="form-group">
+            <label for="lastName">Nom de Famille</label>
+            <input id="lastName" type="text" formControlName="lastName">
+        </div>
+        <div class="form-group">
+            <label for="mail">Mail</label>
+            <input id="mail" type="text" formControlName="mail">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password</label>
+            <input id="pwd" type="text" formControlName="pwd">
+        </div>
+        <div class="action-buttons">
+            <button type="submit" (click)="onSubmitForm()" [disabled]="employeeForm.invalid">Enregistrer</button>
+        </div>
+    </form>
+</div>

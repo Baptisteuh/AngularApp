@@ -1,0 +1,13 @@
+<div class="landing-block">
+    <button (click)="onContinue()" style="font-size: 50px;"> Bienvenue sur Photos ! </button>
+    <br><br><br><br>
+    <form (ngSubmit)="onSubmitForm()" style="text-align: center;">
+        <label for="emailInput">Entrer le destinataire : </label>
+        <input id="emailInput" name="destination Mail" type="email" [(ngModel)]="userEmail">
+        <br><br>
+        <label for="textInput">Entrez le texte du mail : </label><br><br>
+        <textarea id="textInput" name="textInput" [(ngModel)]="textInput"></textarea>
+        <br><br>
+        <button type="submit">ENVOYER</button>
+    </form>
+</div>

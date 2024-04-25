@@ -1,0 +1,5 @@
+<app-employee *ngFor="let employee of employees$ | async" [employee]="employee"></app-employee>
+<div class="no-employees">
+    <p *ngIf="(employees$ | async) == null || (employees$ | async)?.length == 0">Pas d'employés pour le moment...</p>
+    <button routerLink="/employees/create" class="create">Créer</button>
+</div>

@@ -1,0 +1,26 @@
+{
+  "photos": [],
+  "employees": [
+    {
+      "id": 1,
+      "firstName": "Nicolas",
+      "lastName": "Combal",
+      "mail": "ncombal@gmail.com",
+      "pwd": "MDP"
+    },
+    {
+      "id": 2,
+      "firstName": "Baptiste",
+      "lastName": "Touchais",
+      "mail": "touchaisb@gmail.com",
+      "pwd": "MDP2"
+    },
+    {
+      "id": 3,
+      "firstName": "Enzo",
+      "lastName": "Furriel",
+      "mail": "a",
+      "pwd": "a"
+    }
+  ]
+}

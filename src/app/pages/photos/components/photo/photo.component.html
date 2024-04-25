@@ -1,0 +1,7 @@
+<div class="photo-card" [@rotatedState]='state'>
+    <h2>{{ this.photo.title | uppercase }}</h2>
+    <p>{{ this.photo.description }}</p>
+    <button (click)="onViewPhoto()">VIEW</button>
+    <button (click)="onDeletePhoto()">DELETE</button>
+    <button (click)="onRotate()">TOURNER</button>
+</div>

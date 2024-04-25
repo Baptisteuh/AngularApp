@@ -1,0 +1,48 @@
+.game {
+    position: relative;
+    margin: auto;
+    width: 53%;
+    text-align: center;
+    overflow: hidden;
+
+    user-select: none;
+
+    a {
+        cursor: default;
+        background-color: transparent;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+}
+
+.background {
+    z-index: 0;
+    margin: 0px 0px -22px 0px;
+    width: 90%;
+}
+
+#bird {
+    position: fixed;
+    z-index: 2;
+    width: 4%;
+    left: 37%;
+}
+
+#pipe-top {
+    position: fixed;
+    z-index: 1;
+    width: 22%;
+    object-fit: cover;
+    object-position: 0% 100%;
+}
+ 
+#pipe-bot {
+    position: fixed;
+    z-index: 1;
+    width: 22%;
+    object-fit: cover;
+    object-position: 0% 100%;
+    transform: rotate(180deg);
+}

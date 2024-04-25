@@ -1,0 +1,18 @@
+.employee-card {
+    box-sizing: border-box;
+    width: 50%;
+    margin: 20px auto;
+    padding: 10px 30px;
+    box-shadow: lightgray 0px 0px 20px;
+    border-radius: 15px;
+  
+    img {
+      width: 20%;
+      border-radius: 15px;
+    }
+  
+    strong {
+      font-size: large;
+    }
+  
+  }

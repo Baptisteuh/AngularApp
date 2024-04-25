@@ -1,0 +1,16 @@
+<div class="form-card">
+    <h2>Connexion</h2>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input [(ngModel)]="email" type="text" id="email">
+    </div>
+    <div class="form-group">
+      <label for="password">Mot de passe</label>
+      <input [(ngModel)]="password" type="password" id="password">
+    </div>
+    <div class="action-buttons">
+      <p *ngIf="this.error">Identifiants incorects !</p>
+      <button (click)="onLogin()">Connexion</button>
+      <button (click)="onRegister()">Inscription</button>
+    </div>
+  </div>

@@ -1,0 +1,6 @@
+<div class="hpchar-card" *ngIf="this.regex == null || this.hpCharacter.name.toLowerCase().includes(this.regex.toLowerCase())">
+    <h2>{{ this.hpCharacter.name | uppercase }}</h2>
+    <button (click)="onView()">VIEW</button><br>
+    <img src={{this.hpCharacter.image}}>
+    <div *ngIf="hpCharacter.image"><br></div>
+</div>

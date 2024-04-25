@@ -1,0 +1,11 @@
+<p class="game" id="score">Score : {{ this.score }}</p>
+<a (click)="onClick()" (keyup.Space)="onClick()">
+    <div class="game"><img src="https://images.pngnice.com/download/2007/Flappy-Bird-Logo-Transparent-Background.png"
+            id="bird" [ngStyle]="{ top: this.height + '%', transform: this.isRunning ? 'rotate(' + this.height + 'deg)' : 'none' }">
+        <img src="https://campbell.teachur.com/8thGradeFiles/Scratch/FlappyImages/pipeDown.png" id="pipe-top"
+            [ngStyle]="{ top: this.heightPipe + (39.65-this.upPipeHeight) + '%', height: this.upPipeHeight + '%', left: this.pipeLeft + '%' }" [ngClass]="{'animate' : this.isRunning}">
+        <img src="https://campbell.teachur.com/8thGradeFiles/Scratch/FlappyImages/pipeDown.png" id="pipe-bot"
+            [ngStyle]="{ top: (this.heightPipe + 65) + '%', height: this.downPipeHeight + '%', left: this.pipeLeft + '%' }" [ngClass]="{'animate' : this.isRunning}">
+        <img src="https://wallpaperaccess.com/full/4622710.png" class="background">
+    </div>
+</a>
